@@ -23,10 +23,3 @@ jobs:
           git commit -m "automatic update"    || echo "ECHO No changes to commit"
           git push origin || echo "ECHO No changes to commit"
           git status  
-     - name: Session info
-        run: |
-          options(width = 100)
-          pkgs <- installed.packages()[, "Package"]
-          pkgs
-          #sessioninfo::session_info(pkgs, include_base = TRUE)
-        shell: Rscript {0}            
