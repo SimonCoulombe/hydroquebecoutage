@@ -23,10 +23,17 @@ jobs:
       - name: list files  data
         run:  |
           ls data/*    
+      - name:  pwd
+        run:  |
+          pwd
+      - name: ls 
+        run:  |
+          ls -lah
+          
       - name: git status
         run:  |
           git status
-          pwd
+          
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
