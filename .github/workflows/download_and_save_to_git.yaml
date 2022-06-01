@@ -10,10 +10,19 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.pat_github }}
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+      - name: list files 
+        run:  |
+          ls * -lh
+      - name: list files  data
+        run:  |
+          ls data/*               
       - name: Scrape projects
         run: |
           Rscript hydroquebecoutage.R
+      - name: list files  data
+        run:  |
+          ls data/*                         
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
