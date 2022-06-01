@@ -10,6 +10,8 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.pat_github }}
     steps:
+      - name: work around permission issue
+        run: git config --global --add safe.directory /__w/hydroquebecoutage/hydroquebecoutage
       - uses: actions/checkout@v2
       - name: list files 
         run:  |
