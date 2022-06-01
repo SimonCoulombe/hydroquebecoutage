@@ -5,7 +5,8 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    container: rocker/tidyverse
+    container: 
+      image: rocker/tidyverse
     env:
       GITHUB_PAT: ${{ secrets.pat_github }}
     steps:
