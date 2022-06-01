@@ -4,13 +4,12 @@ on:
       - .github/workflows/download_and_save_to_git.yaml
 jobs:
   job1:
-    runs-on: rocker/tidyverse
+    runs-on:ubuntu-latest
+    container: rocker/tidyverse
     env:
       GITHUB_PAT: ${{ secrets.pat_github }}
     steps:
       - uses: actions/checkout@v1
-#      - uses: r-lib/actions/setup-r@v1
-#      - uses: r-lib/actions/setup-pandoc@v1
       - name: Scrape projects
         run: |
           Rscript hydroquebecoutage.R
