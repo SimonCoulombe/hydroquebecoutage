@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+    <meta charset="utf-8">
+    <title>Problèmes techniques | Hydro-Québec</title>
+    <meta property="og:title" content="Services Internet indisponibles" />
+    <meta property="og:image" content="http://www.hydroquebec.com/images2012/logo-facebook.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://hydroquebec.com/erreurs/travaux.html" />
+    <meta property="og:site_name " content="Hydro-Québec" />
+
+    <!-- FILES  -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,800,800i" rel="stylesheet" type="text/css">
+	<link href="/libs/mmenu/dist/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
+
+	<link href="/libs/mmenu/dist/extensions/pagedim/jquery.mmenu.pagedim.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/dist/extensions/pageshadow/jquery.mmenu.pageshadow.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/addons/navbars/jquery.mmenu.navbars.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/addons/setselected/jquery.mmenu.setselected.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/extensions/multiline/jquery.mmenu.multiline.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/addons/screenreader/jquery.mmenu.screenreader.css" type="text/css" rel="stylesheet" />
+	<link href="/libs/mmenu/addons/keyboardnavigation/jquery.mmenu.keyboardnavigation.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="/static/css2016/hq-styles.min.css">
+	<script src="/static/js2016/gtm-code.min.js"></script>
+	<!-- <script src="/static/js2016/gaq-suivi.min.js"></script> -->
+    <!-- END FILES -->
+
+    <!-- FILES/SCRIPTS LOCAL -->
+    
+
+    <!-- END FILES/SCRIPTS LOCAL -->
+    <style>
+        h2{
+            min-height: 110px;
+        }
+
+        .hq-header-duo-bloc img{
+            width: 165px;
+        }
+        @media only screen and (max-width: 767px) {
+            h2{
+                min-height: unset;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="hq-outer-wrapper">
+
+        <!-- TopBar -->
+        <header class="container-fluid hq-entete-vide" id="hq-main-header">
+	<div class="row hq-nav-desktop">
+		<div class="medium-12 columns">
+			<ul class="ancre-accessibilite">
+				<li><a class="caption" id="skip-to-content" href="#hq-outer-mask">Passer au contenu principal</a></li>
+				<li><a class="caption" id="skip-to-footer" href="#hq-main-footer">Passer au menu de pied de page</a></li>
+			</ul>
+			<nav class="hq-nav-utils" aria-label="Navigation utilitaire">
+				<ul>
+					<li><a href="http://www.hydroquebec.com/nous-joindre/">Nous joindre</a></li>
+					<li><a href="https://pannes.hydroquebec.com/pannes/">Info-pannes</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="row hq-header-trio-bloc">
+		<div class="small-12 columns">
+			<div class="flex-container">
+				<div class="hq-header-duo-bloc">
+					<div class="">
+						<a class="hq-logo" href="https://www.hydroquebec.com/residentiel/">
+							<img alt="Hydro-Quebec" src="/images2016/logo-hydro-quebec-couleur.svg">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+ </header>
+        <!-- end TopBar -->
+
+        <div id="hq-outer-mask">
+
+            <!-- CONTENU PAGE -->
+            <div class="row" role="main">
+                <h1 class="visuallyhidden">Problème technique</h1>
+                <div class="columns small-12 medium-6">
+                    <h2>Site Web d’Hydro-Québec temporairement indisponible</h2>
+                    <p>Afin de permettre la réalisation d’activités d’amélioration et de vérification, notre site Web ne sera pas accessible dans la nuit du vendredi&nbsp;10&nbsp;juin au samedi&nbsp;11&nbsp;juin.</p>
+                    <p>Pour signaler une panne ou pour toute urgence, vous pouvez nous joindre 24&nbsp;h&nbsp;sur&nbsp;24 au 1&nbsp;800&nbsp;790&#8209;2424.</p>
+                    <p><strong>Nous sommes désolés pour les inconvénients que cette interruption pourrait causer et nous vous remercions de votre compréhension.</strong></p>
+                </div>
+                <div class="columns small-12 medium-6" lang="en">
+                    <h2>Hydro-Québec website temporarily unavailable</h2>
+                    <p>To enable some improvement and verification activities to be performed, our website will not be available overnight from Friday,&nbsp;June&nbsp;10 to&nbsp;Saturday,&nbsp;June&nbsp;11. </p>
+                    <p>To report an outage or for any emergency, you can contact&nbsp;us 24&nbsp;hours&nbsp;a&nbsp;day at 1&nbsp;800&nbsp;790&#8209;2424.</p>
+                    <p><strong>We apologize for any inconvenience that this interruption may cause, and we thank you for your understanding.</strong></p>
+                </div>
+            </div>
+
+            <!-- End Contenu -->
+            <!-- END CONTENU PAGE -->
+
+            <!-- FOOTER -->
+            <footer class="container-fluid hq-footer-empty" id="hq-main-footer">
+	<h2 class="visuallyhidden">Pied de page</h2>
+	<div class="row">
+		<div class="columns small-12">
+			<img src="/images2016/logo-hydro-quebec-coupe.svg" alt="" class="hq-logo-coupe">
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="columns small-12">
+			<div class="hq-footer-copyright">
+				
+				<p>&copy; Hydro-Québec, 1996-2022. <span class="nowrap">Tous droits réservés.</span></p>
+			</div>
+		</div>
+	</div>
+</footer>
+</div>
+            <!-- END FOOTER -->
+
+        </div>
+    </div>
+    <!-- CONFIGURATION -->
+    <script>
+nom_du_theme = "racine";
+</script>
+    <!-- END CONFIGURATION -->
+
+    <!-- SCRIPTS GLOBAL -->
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="/static/js2016/plugins.min.js"></script>
+<script src="/static/js2016/hq-scripts.min.js"></script>
+<!-- Menu -->
+<script src="/static/js2016/jquery.hqmenus.min.js"></script>
+<!-- Mobile menu-->
+<script src="/libs/mmenu/js/min/jquery.mmenu.hq.min.js"></script>
+<script src="/libs/mmenu/addons/navbars/jquery.mmenu.navbars.min.js"></script>
+<script src="/libs/mmenu/addons/setselected/jquery.mmenu.setselected.min.js"></script>
+<script src="/libs/mmenu/addons/backbutton/jquery.mmenu.backbutton.min.js"></script>
+<script src="/libs/mmenu/addons/screenreader/jquery.mmenu.screenreader.min.js"></script>
+<script src="/libs/mmenu/addons/keyboardnavigation/jquery.mmenu.keyboardnavigation.min.js"></script>
+<!-- Other plugins and scripts -->
+<script src="/static/js2016/hq-mmenu-config.min.js"></script>
+
+<script src="/genesyschat/hq-chat.js"></script>
+<script src="/libs/hq-utils/ie-detection.js"></script>
+    <!-- END SCRIPTS GLOBAL -->
+
+    <!-- SCRIPTS LOCAL -->
+    <script type="text/javascript">
+        $('.hq-logo img').unwrap();
+        $('.hq-footer-logo img').unwrap();
+        $(".hq-nav-utils").parent().css("padding-top","30px")
+        $('.hq-nav-utils').hide();
+    </script>
+    <!-- END SCRIPTS LOCAL -->
+
+    <!-- SCRIPTS PAGE -->
+    <!-- END SCRIPTS PAGE -->
+
+</body>
+
+</html>
