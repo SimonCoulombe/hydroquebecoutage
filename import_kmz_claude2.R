@@ -4,9 +4,10 @@ library(lubridate)
 library(purrr)
 library(furrr)
 library(DBI)
+library(pool)
 
 
-con <- dbConnect(
+con <- dbPool(
   RPostgres::Postgres(),
   host = "192.168.2.15",
   dbname = Sys.getenv("POSTGIS_DBNAME"),
@@ -118,14 +119,20 @@ upload_kmz_to_outages <- function(kmz_path, con, table_name = "outages", lookup)
   
 
   # append timestamp and duration
-  kmz_data <- kmz_data %>% left_join(lookup)
+  kmz_data <- kmz_data %>% 
+    left_join(lookup)
+  
+  # rename geometry to geom to match postgis conventions?  
+  kmz_data <- kmz_data %>% rename(geom = geometry)
   # Upload to PostGIS
   tryCatch({
     st_write(kmz_data, 
              con, 
              table_name, 
              append = table_exists,  
-             row.names = FALSE)
+             row.names = FALSE,
+             layer_options = "GEOMETRY_NAME=geom"  # explicitly enforce column name
+             )
     
     cat("Successfully uploaded", basename(kmz_path), "to", table_name, 
         "(", nrow(kmz_data), "features)\n")
@@ -196,7 +203,7 @@ cat("Found", length(all_files), "KMZ files in data folder\n")
 all_files_without_last <- all_files[-length(all_files)]
 files_to_upload <- get_missing_files(all_files_without_last, con, "outages")
 
-files_to_upload <- files_to_upload[1:100]
+
 # Only proceed if there are files to upload
 if (length(files_to_upload) > 0) {
   
@@ -216,6 +223,7 @@ if (length(files_to_upload) > 0) {
 }
 
 #dbExecute(con, "drop table outages")
-zz <- st_read(con, query = "SELECT * FROM outages") 
-zz %>% glimpse()
+#zz <- st_read(con, query = "SELECT * FROM outages") 
+#zz %>% glimpse()
 #zz %>% distinct(source_file)
+

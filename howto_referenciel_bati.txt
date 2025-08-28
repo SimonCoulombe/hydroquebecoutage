@@ -1,16 +1,16 @@
 téléchargé le référentiel québécois sur les bâtis en format GPKG ici: 
 https://www.donneesquebec.ca/recherche/dataset/referentiel_bati
 
-code import original 
+originale:
 
-ogr2ogr -f "PostgreSQL" PG:"host=192.168.2.15 port=5432 dbname=postgres user=$user password=$password" "C:\Users\Simon\Downloads\RefBati_GPKG\Referentiel_batiment.gpkg" -nln Referentiel_batiment -overwrite
+ogr2ogr -f "PostgreSQL" PG:"host=192.168.2.15 port=5432 dbname=postgres user=postgres password=$password" "C:\Users\Simon\Downloads\RefBati_GPKG\Referentiel_batiment.gpkg" -nln batiments -overwrite
 
 
 reprojeté en crs 4326 et avec index spatial:
 
 ogr2ogr -f "PostgreSQL" PG:"host=192.168.2.15 port=5432 dbname=postgres user=postgres password=postgres" ^
 "C:\Users\Simon\Downloads\RefBati_GPKG\Referentiel_batiment.gpkg" ^
--nln Referentiel_batiment_4326 -overwrite -t_srs EPSG:4326 ^
+-nln batiments_4326 -overwrite -t_srs EPSG:4326 ^
 -lco GEOMETRY_NAME=geom -lco FID=id
 
 
