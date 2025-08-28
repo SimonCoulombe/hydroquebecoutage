@@ -35,10 +35,10 @@ dbExecute(con, "DROP TABLE IF EXISTS my_schema.iris CASCADE;")
 dbExecute(con, "DROP TABLE IF EXISTS my_schema.iris_computed_from_con CASCADE;")
 dbExecute(con, "DROP TABLE IF EXISTS my_schema.iris_computed_from_pool CASCADE;")
 
-# move tables from public to my_schema
-dbExecute(con, "ALTER TABLE public.batiments SET SCHEMA my_schema;")
-dbExecute(con, "ALTER TABLE public.batiments_4326 SET SCHEMA my_schema;")
-dbExecute(con, "ALTER TABLE public.outages SET SCHEMA my_schema;")
+# move tables from  my_schema to public 
+dbExecute(con, "ALTER TABLE my_schema.batiments SET SCHEMA public;")
+dbExecute(con, "ALTER TABLE my_schema.batiments_4326 SET SCHEMA public;")
+dbExecute(con, "ALTER TABLE my_schema.outages SET SCHEMA public;")
 
 
 # buildings in outage!
