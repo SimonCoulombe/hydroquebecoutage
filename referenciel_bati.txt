@@ -1,0 +1,50 @@
+téléchargé le référentiel québécois sur les bâtis en format GPKG ici: 
+https://www.donneesquebec.ca/recherche/dataset/referentiel_bati
+
+originale:
+
+ogr2ogr -f "PostgreSQL" PG:"host=192.168.2.15 port=5432 dbname=postgres user=postgres password=$password" "C:\Users\Simon\Downloads\RefBati_GPKG\Referentiel_batiment.gpkg" -nln batiments -overwrite
+
+
+reprojeté en crs 4326 et avec index spatial:
+
+ogr2ogr -f "PostgreSQL" PG:"host=192.168.2.15 port=5432 dbname=postgres user=postgres password=postgres" ^
+"C:\Users\Simon\Downloads\RefBati_GPKG\Referentiel_batiment.gpkg" ^
+-nln batiments_4326 -overwrite -t_srs EPSG:4326 ^
+-lco GEOMETRY_NAME=geom -lco FID=id
+
+
+2️⃣ Créer l’index spatial dans PostGIS
+
+Connecte-toi à PostgreSQL (par exemple avec psql) et exécute :
+-- Crée un index spatial pour accélérer les requêtes
+CREATE INDEX idx_batiments_geom
+ON batiments_4326
+USING GIST(geom);
+
+GIST est le type d’index recommandé pour les colonnes géométriques.
+
+3️⃣ Vérifier que tout est correct
+-- Vérifie les colonnes et le type de géométrie
+\d+ batiments_4326
+
+-- Compte les lignes
+SELECT COUNT(*) FROM batiments_4326;
+
+4️⃣ Lire la table depuis R
+library(sf)
+library(DBI)
+
+# Connexion
+con <- dbConnect(RPostgres::Postgres(),
+                 host="192.168.2.15",
+                 port=5432,
+                 dbname="postgres",
+                 user="postgres",
+                 password="postgres")
+
+# Lire un échantillon
+batiments <- st_read(con, query = "SELECT * FROM batiments_4326 LIMIT 50")
+
+# Vérifier le CRS
+st_crs(batiments)

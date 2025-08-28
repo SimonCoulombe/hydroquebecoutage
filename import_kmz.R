@@ -1,3 +1,5 @@
+
+
 library(dplyr)
 library(sf)
 library(zip)
@@ -42,7 +44,8 @@ read_kmz_safe <- function(path) {
     return(NULL)
   })
 }
-#kmz <- read_kmz("data/20250824010018.kmz") 
+ read_kmz_safe("data/20250824010018.kmz")
+ read_kmz_safe("data/20221002003015.kmz") 
 
 ## read polygons and join with lookup
 polygons <- future_map_dfr(files, read_kmz_safe, .options = furrr_options(seed = TRUE))
@@ -50,4 +53,5 @@ polygons <- future_map_dfr(files, read_kmz_safe, .options = furrr_options(seed =
 # join start/end info
 polygons <- polygons %>%
   left_join(lookup, by = "path")
+
 
