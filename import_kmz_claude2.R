@@ -5,6 +5,15 @@ library(purrr)
 library(furrr)
 library(DBI)
 
+
+con <- dbConnect(
+  RPostgres::Postgres(),
+  host = "192.168.2.15",
+  dbname = Sys.getenv("POSTGIS_DBNAME"),
+  port = 5432,
+  user = Sys.getenv("POSTGIS_USER"),
+  password = Sys.getenv("POSTGIS_PASSWORD")
+)
 # Set up parallel processing
 plan(multisession, workers = parallel::detectCores() - 1)
 
@@ -209,3 +218,4 @@ if (length(files_to_upload) > 0) {
 #dbExecute(con, "drop table outages")
 zz <- st_read(con, query = "SELECT * FROM outages") 
 zz %>% glimpse()
+#zz %>% distinct(source_file)

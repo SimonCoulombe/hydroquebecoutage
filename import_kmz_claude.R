@@ -10,10 +10,10 @@ library(sf)
 con <- dbConnect(
   RPostgres::Postgres(),
   host = "192.168.2.15",
-  dbname = "postgres",
+  dbname = Sys.getenv("POSTGIS_DBNAME"),
   port = 5432,
-  user = "postgres",
-  password = "postgres"
+  user = Sys.getenv("POSTGIS_USER"),
+  password = Sys.getenv("POSTGIS_PASSWORD")
 )
 
 # Set up parallel processing
