@@ -28,9 +28,9 @@ lookup <- tibble(
 read_kmz_safe <- function(path) {
   tryCatch({
     tmpdir <- tempdir()
-    unzip(path, exdir = tmpdir)
-    kml_file <- list.files(tmpdir, pattern = "\\.kml$", full.names = TRUE)[1]
+    unzip(path, exdir = tmpdir, junkpaths = TRUE)
     
+    kml_file <- list.files(tmpdir, pattern = "\\.kml$", full.names = TRUE)[1]
     if (is.na(kml_file)) stop("No KML found in KMZ")
     
     sf_obj <- sf::st_read(kml_file, quiet = TRUE)
@@ -42,7 +42,6 @@ read_kmz_safe <- function(path) {
     return(NULL)
   })
 }
-
 #kmz <- read_kmz("data/20250824010018.kmz") 
 
 ## read polygons and join with lookup
