@@ -49,7 +49,7 @@
     var dataLayerName = 'adobeDataLayer' || 'adobeDataLayer';
     window[dataLayerName] = window[dataLayerName] || [];
     window[dataLayerName].push({
-        page: JSON.parse("{\x22emergency\u002Dpage\u002Dde9a6524cf\x22:{\x22@type\x22:\x22hydroquebec\/components\/salledesnouvelles\/emergency\u002Dpage\x22,\x22repo:modifyDate\x22:\x222025\u002D10\u002D24T16:59:02Z\x22,\x22dc:title\x22:\x22Indisponibilité temporaire du site Web d\x27Hydro\u002DQuébec\x22,\x22xdm:template\x22:\x22\/conf\/hydroquebec\/settings\/wcm\/templates\/modele\u002Dde\u002Dpage\u002Dd\u002Durgence\x22,\x22xdm:language\x22:\x22fr\x22,\x22xdm:tags\x22:[],\x22repo:path\x22:\x22\/content\/hydroquebec\/fr\/nouvelles\/indisponibilite\u002Dtemporaire.html\x22}}"),
+        page: JSON.parse("{\x22emergency\u002Dpage\u002Dde9a6524cf\x22:{\x22@type\x22:\x22hydroquebec\/components\/salledesnouvelles\/emergency\u002Dpage\x22,\x22repo:modifyDate\x22:\x222025\u002D10\u002D25T04:04:56Z\x22,\x22dc:title\x22:\x22Indisponibilité temporaire du site Web d\x27Hydro\u002DQuébec\x22,\x22xdm:template\x22:\x22\/conf\/hydroquebec\/settings\/wcm\/templates\/modele\u002Dde\u002Dpage\u002Dd\u002Durgence\x22,\x22xdm:language\x22:\x22fr\x22,\x22xdm:tags\x22:[],\x22repo:path\x22:\x22\/content\/hydroquebec\/fr\/nouvelles\/indisponibilite\u002Dtemporaire.html\x22}}"),
         event: 'cmp:show',
         eventInfo: {
             path: 'page.emergency\u002Dpage\u002Dde9a6524cf'
@@ -130,8 +130,8 @@
                 <!--
 				<li
 					class="cmp-hq-articledate__list-item"
-					data-sly-test="24 octobre 2025">
-					Dernière mise à jour : 24 octobre 2025
+					data-sly-test="25 octobre 2025">
+					Dernière mise à jour : 25 octobre 2025
 				</li>-->
             </ul>
         </div>
